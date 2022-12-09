@@ -1,12 +1,13 @@
 import Image from "next/image";
 import React from "react";
 import style from "../styles/support.module.css";
+import supportBg from "../public/img/bg/b_bg_02.jpg";
 
 const Support = () => {
   return (
     <section className={style.support}>
       <div className="absolute top-0 bottom-0 left-0 right-0 w-full max-h-[200px]">
-        <Image src="" width={100} alt="support bg" />
+        <Image src={supportBg} width="100%" height="50%" alt="support bg" />
       </div>
       <div className="container flex  w-[70%] mx-auto">
         <div className="flex-1">

@@ -31,9 +31,9 @@ const Aboutus = () => {
                 With our all New strategy on bitcoin and forex trades, we make
                 up to 98% daily wins, we also have a bitcoin mining team working
                 with our platform. We generate a profit of 3BTC daily which
-                equals $47,686 in today's market. Our company is SEC registered,
-                fully licensed and Insured, your initial capital invest is 100%
-                insured
+                equals $47,686 in today&apos;s market. Our company is SEC
+                registered, fully licensed and Insured, your initial capital
+                invest is 100% insured
               </p>
             </div>
             <div className="legend_count flex flex-row">
