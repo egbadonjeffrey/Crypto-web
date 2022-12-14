@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import Plans from "../components/Plans";
 import Process from "../components/Process";
 import Support from "../components/Support";
+import Testimonials from "../components/Testimonials";
 import Video from "../components/Video";
 import styles from "../styles/Home.module.css";
 
@@ -17,6 +18,7 @@ export default function Home() {
         <Plans />
         <Aboutus />
         <Support />
+        <Testimonials />
       </div>
     </Layout>
   );

@@ -12,7 +12,7 @@ const Nav = () => {
   const [logo, setLogo] = useState(WhiteLogo);
 
   const changeBackground = () => {
-    if (window.scrollY >= 100) {
+    if (window.scrollY >= 20) {
       setNav(true);
       setLogo(ColorLogo);
     } else {

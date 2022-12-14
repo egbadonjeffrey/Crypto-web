@@ -11,14 +11,11 @@ const Aboutus = () => {
 
   const [counterOn, setCounterOn] = useState(false);
 
-  console.log(Legend);
   return (
     <div className={`${style.aboutus} relative  `}>
       <div className="w-[70%] mx-auto py-[50px]">
         <div className="flex gap-[2rem] justify-center items-center ">
-          <div className="chart flex-1 w-[20vh]">
-            {/* <AdvancedChart widgetProps={{ style: { height: "400px" } }} /> */}
-          </div>
+          <div className="chart flex-1">{/* <AdvancedChart /> */}</div>
           <div className="about_text flex-1 text-white">
             <div className=" flex flex-col text-right gap-[1rem] ">
               <h3 className="text-base mb-[.5rem] font-medium">
