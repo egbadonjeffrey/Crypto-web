@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
 import Aboutus from "../components/Aboutus";
+import Devices from "../components/Devices";
+import JoinNow from "../components/JoinNow";
 import Layout from "../components/Layout";
 import Plans from "../components/Plans";
 import Process from "../components/Process";
@@ -19,6 +21,8 @@ export default function Home() {
         <Aboutus />
         <Support />
         <Testimonials />
+        <Devices />
+        <JoinNow />
       </div>
     </Layout>
   );

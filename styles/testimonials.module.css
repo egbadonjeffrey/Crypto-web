@@ -1,0 +1,16 @@
+
+.image{
+    position: relative;
+}
+
+.image::after {
+    content: "";
+    border-radius: 100%;
+    position: absolute;
+    background-color: #6c54dc;
+    width: 110%;
+    height: 110%;
+    left: -2%;
+    top: -2%;
+    z-index: -1;
+}

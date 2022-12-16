@@ -1,8 +1,9 @@
 import React from "react";
+import style from "../styles/testimonials.module.css";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-// import required modules
 import { Pagination } from "swiper";
 
 import * as Data from "../utils/data";
@@ -12,12 +13,12 @@ const Testimonials = () => {
   const { Testimonials } = Data.Data;
 
   return (
-    <div className="testimonials">
+    <div className="testimonials w-[70%] mx-auto">
       <h1 className="text-center text-[2rem] font-medium">
         Hear From Our Clients
       </h1>
       <Swiper
-        spaceBetween={50}
+        spaceBetween={10}
         slidesPerView={2}
         pagination={{
           dynamicBullets: true,
@@ -26,8 +27,10 @@ const Testimonials = () => {
       >
         {Testimonials.map((testimonial, index) => (
           <SwiperSlide key={index}>
-            <div className="slide flex w-[90%] h-auto gap-[.5rem] justify-between  my-[4rem] mx-auto py-[2rem] px-[1rem] shadow-lg shadow-[#ccc] rounded-lg">
-              <div className="image w-[130px] h-[130px] relative  rounded-full">
+            <div className="slide flex  h-auto gap-[1.5rem] justify-around  my-[4rem]  py-[2rem] px-[1rem] s rounded-lg">
+              <div
+                className={`${style.image} w-[100px] h-[100px] relative  rounded-full`}
+              >
                 <Image
                   src={testimonial.image}
                   alt="Customer Image"

@@ -18,7 +18,7 @@ const Layout = ({ title, children }) => {
 
         {children}
 
-        <footer className="w-[80%] mx-auto mt-[100vp] h-auto z-50">
+        <footer className="mt-[100vp]z-50">
           <Footer></Footer>
         </footer>
       </div>
