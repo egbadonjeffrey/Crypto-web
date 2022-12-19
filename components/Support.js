@@ -202,36 +202,54 @@ const Support = () => {
                   id="tab1"
                   className={`tab_content_hover ${tab ? "block" : "hidden"}`}
                 >
-                  <h5>We are renowed</h5>
-                  <p>Award winning and Industry leading roles.</p>
+                  <h5 className="font-quicksand text-[16px] font-bold">
+                    We are renowed
+                  </h5>
+                  <p className="font-quicksand text-[13px]">
+                    Award winning and Industry leading roles.
+                  </p>
                 </div>
                 <div
                   id="tab2"
                   className={`tab_content_hover ${tab2 ? "block" : "hidden"}`}
                 >
-                  <h5>Responsive</h5>
-                  <p>Our Platform is built for every device.</p>
+                  <h5 className="font-quicksand text-[16px] font-bold">
+                    Responsive
+                  </h5>
+                  <p className="font-quicksand text-[13px]">
+                    Our Platform is built for every device.
+                  </p>
                 </div>
                 <div
                   id="tab3"
                   className={`tab_content_hover ${tab3 ? "block" : "hidden"}`}
                 >
-                  <h5>Direct</h5>
-                  <p>We are direct, less Paper works.</p>
+                  <h5 className="font-quicksand text-[16px] font-bold">
+                    Direct
+                  </h5>
+                  <p className="font-quicksand text-[13px]">
+                    We are direct, less Paper works.
+                  </p>
                 </div>
                 <div
                   id="tab4"
                   className={`tab_content_hover ${tab4 ? "block" : "hidden"}`}
                 >
-                  <h5>24/7 support</h5>
-                  <p>Come and experience our wonderful customer support.</p>
+                  <h5 className="font-quicksand text-[16px] font-bold">
+                    24/7 support
+                  </h5>
+                  <p className="font-quicksand text-[13px]">
+                    Come and experience our wonderful customer support.
+                  </p>
                 </div>
                 <div
                   id="tab5"
                   className={`tab_content_hover ${tab5 ? "block" : "hidden"}`}
                 >
-                  <h5>Secured</h5>
-                  <p>
+                  <h5 className="font-quicksand text-[16px] font-bold">
+                    Secured
+                  </h5>
+                  <p className="font-quicksand text-[13px]">
                     We are secured, your data, and funds are secured with us.
                   </p>
                 </div>
@@ -239,15 +257,21 @@ const Support = () => {
                   id="tab6"
                   className={`tab_content_hover ${tab6 ? "block" : "hidden"}`}
                 >
-                  <h5>Educative</h5>
-                  <p>We take out time to enlighten you of the market.</p>
+                  <h5 className="font-quicksand text-[16px] font-bold">
+                    Educative
+                  </h5>
+                  <p className="font-quicksand text-[13px]">
+                    We take out time to enlighten you of the market.
+                  </p>
                 </div>
                 <div
                   id="tab7"
                   className={`tab_content_hover ${tab7 ? "block" : "hidden"}`}
                 >
-                  <h5>Great community</h5>
-                  <p>
+                  <h5 className="font-quicksand text-[16px] font-bold">
+                    Great community
+                  </h5>
+                  <p className="font-quicksand text-[13px]">
                     Our platform is used by millions of traders. 2,546,905+
                     accounts created
                   </p>
@@ -256,8 +280,12 @@ const Support = () => {
                   id="tab8"
                   className={`tab_content_hover ${tab8 ? "block" : "hidden"}`}
                 >
-                  <h5>Innovative</h5>
-                  <p>We are innovative and novel. .</p>
+                  <h5 className="font-quicksand text-[16px] font-bold">
+                    Innovative
+                  </h5>
+                  <p className="font-quicksand text-[13px]">
+                    We are innovative and novel. .
+                  </p>
                 </div>
               </div>
             </div>

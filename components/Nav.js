@@ -63,6 +63,12 @@ const Nav = () => {
             </Menu.Items>
           </Menu>
           <Link href="/contactus"> Contact us </Link>
+          <Link
+            href="/login"
+            className="bg-[#FFEB3B] text-[600] text-[13px] text-[#4e585d] px-[30px] py-[5px] rounded-full "
+          >
+            Login
+          </Link>
         </div>
       </nav>
     </header>
