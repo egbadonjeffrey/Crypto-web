@@ -13,7 +13,7 @@ import community from "../public/img/hover-box-svgs/public-speech.svg";
 import innovative from "../public/img/hover-box-svgs/inclined-rocket.svg";
 
 const Support = () => {
-  const [tab, setTab] = useState(false);
+  const [tab, setTab] = useState(true);
   const [tab2, setTab2] = useState(false);
   const [tab3, setTab3] = useState(false);
   const [tab4, setTab4] = useState(false);
@@ -51,15 +51,29 @@ const Support = () => {
         <div className="flex-1 max-w-[41.667%]  ">
           <div className={`${style.hover_box_container} relative`}>
             <a
-              href="tab1"
-              className={`${style.display_onhover_box_item} `}
-              onMouseEnter={() => setTab(!tab)}
+              href="#"
+              className={`${style.display_onhover_box_item} ${
+                tab ? style.active : style.itsnot
+              } `}
+              onMouseEnter={() => {
+                setTab(true);
+                setTab2(false);
+                setTab3(false);
+                setTab4(false);
+                setTab5(false);
+                setTab6(false);
+                setTab7(false);
+                setTab8(false);
+              }}
+              z
             >
               <Image src={qualityBadge} className="w-[35px]" alt="tab1" />
             </a>
             <a
-              href="tab2"
-              className={`${style.display_onhover_box_item}`}
+              href="#"
+              className={`${style.display_onhover_box_item}  ${
+                tab2 ? style.active : style.itsnot
+              } `}
               onMouseEnter={() => {
                 setTab(false);
                 setTab2(true);
@@ -73,22 +87,112 @@ const Support = () => {
             >
               <Image src={responsive} className="w-[35px]" alt="tab1" />
             </a>
-            <a href="tab3" className={`${style.display_onhover_box_item}`}>
+            <a
+              href="#"
+              className={`${style.display_onhover_box_item}  ${
+                tab3 ? style.active : style.itsnot
+              } `}
+              onMouseEnter={() => {
+                setTab(false);
+                setTab2(false);
+                setTab3(true);
+                setTab4(false);
+                setTab5(false);
+                setTab6(false);
+                setTab7(false);
+                setTab8(false);
+              }}
+            >
               <Image src={direct} className="w-[35px]" alt="tab1" />
             </a>
-            <a href="tab4" className={`${style.display_onhover_box_item}`}>
+            <a
+              href="#"
+              className={`${style.display_onhover_box_item}  ${
+                tab4 ? style.active : style.itsnot
+              } `}
+              onMouseEnter={() => {
+                setTab(false);
+                setTab2(false);
+                setTab3(false);
+                setTab4(true);
+                setTab5(false);
+                setTab6(false);
+                setTab7(false);
+                setTab8(false);
+              }}
+            >
               <Image src={support} className="w-[35px]" alt="tab1" />
             </a>
-            <a href="tab5" className={`${style.display_onhover_box_item}`}>
+            <a
+              href="#"
+              className={`${style.display_onhover_box_item}  ${
+                tab5 ? style.active : style.itsnot
+              } `}
+              onMouseEnter={() => {
+                setTab(false);
+                setTab2(false);
+                setTab3(false);
+                setTab4(false);
+                setTab5(true);
+                setTab6(false);
+                setTab7(false);
+                setTab8(false);
+              }}
+            >
               <Image src={secured} className="w-[35px]" alt="tab1" />
             </a>
-            <a href="tab6" className={`${style.display_onhover_box_item}`}>
+            <a
+              href="#"
+              className={`${style.display_onhover_box_item}  ${
+                tab6 ? style.active : style.itsnot
+              } `}
+              onMouseEnter={() => {
+                setTab(false);
+                setTab2(false);
+                setTab3(false);
+                setTab4(false);
+                setTab5(false);
+                setTab6(true);
+                setTab7(false);
+                setTab8(false);
+              }}
+            >
               <Image src={educative} className="w-[35px]" alt="tab1" />
             </a>
-            <a href="tab7" className={`${style.display_onhover_box_item}`}>
+            <a
+              href="#"
+              className={`${style.display_onhover_box_item}  ${
+                tab7 ? style.active : style.itsnot
+              } `}
+              onMouseEnter={() => {
+                setTab(false);
+                setTab2(false);
+                setTab3(false);
+                setTab4(false);
+                setTab5(false);
+                setTab6(false);
+                setTab7(true);
+                setTab8(false);
+              }}
+            >
               <Image src={community} className="w-[35px]" alt="tab1" />
             </a>
-            <a href="tab8" className={`${style.display_onhover_box_item}`}>
+            <a
+              href="#"
+              className={`${style.display_onhover_box_item}  ${
+                tab8 ? style.active : style.itsnot
+              } `}
+              onMouseEnter={() => {
+                setTab(false);
+                setTab2(false);
+                setTab3(false);
+                setTab4(false);
+                setTab5(false);
+                setTab6(false);
+                setTab7(false);
+                setTab8(true);
+              }}
+            >
               <Image src={innovative} className="w-[35px]" alt="tab1" />
             </a>
 
