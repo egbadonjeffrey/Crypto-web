@@ -4,13 +4,14 @@ const particlesConfig = {
       value: "#79799c",
     },
   },
+
   style: {
     position: "absolute",
     top: "0",
     left: "0",
     right: "0",
     width: "100%",
-    height: "70%",
+    height: "65%",
     zIndex: "-10",
     background: "linear-gradient(to bottom right,#79799c,#131327)",
   },

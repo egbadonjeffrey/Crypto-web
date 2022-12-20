@@ -17,8 +17,6 @@ const Nav = () => {
   const [transparent, setWhite] = useState(false);
   const [menu, setMenu] = useState(false);
 
-  console.log(menu);
-
   const isDesktop = useMediaQuery({ minWidth: 1224 });
 
   const changeBackground = () => {

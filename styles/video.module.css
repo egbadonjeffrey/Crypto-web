@@ -1,4 +1,4 @@
-.video::before {
+.particle::before {
       content: '';
       width: 100px;
       height: 100px;
@@ -10,14 +10,14 @@
       z-index: 20;
   }
 
-  .video::after {
+  .particle::after {
     content: '';
     width: 120px;
     height: 200px;
     background-image: url("../public/img/shapes/shape_03.png");
     background-repeat: no-repeat;
     top: 20rem;
-    right: 10rem;
+    right: 15rem;
     position: absolute;
     z-index: 20;
 }

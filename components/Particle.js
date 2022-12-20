@@ -3,6 +3,8 @@ import particlesConfig from "../config/particles-config";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 
+import { useRouter } from "next/router";
+
 import style from "../styles/video.module.css";
 
 const Particle = () => {
@@ -13,12 +15,14 @@ const Particle = () => {
     await loadFull(engine);
   }, []);
 
+  const router = useRouter();
+
   const particlesLoaded = useCallback(async (container) => {
     // await console.log(container);
   }, []);
 
   return (
-    <div className={`${style.video}`}>
+    <div className={`${style.particle}`}>
       <Particles
         id="tsparticles"
         init={particlesInit}
