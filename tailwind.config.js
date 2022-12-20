@@ -12,6 +12,10 @@ module.exports = {
         quicksand: ["Quicksand", ...defaultTheme.fontFamily.sans],
         poppins: ["Poppins"],
       },
+      screens: {
+        phone: "640px",
+        tablet: "768px",
+      },
     },
   },
   plugins: [],

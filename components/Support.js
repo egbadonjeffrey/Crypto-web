@@ -29,7 +29,7 @@ const Support = () => {
       <div className="absolute top-0 bottom-0 left-0 right-0 w-full max-h-[200px]">
         <Image src={supportBg} className="w-full h-[50%]" alt="support bg" />
       </div>
-      <div className="container flex gap-[2rem] w-[70%] mx-auto">
+      <div className="container flex gap-[2rem]  w-[70%] phone:w-full mx-auto">
         <div className="flex-1 max-w-[50%] px-[15px]">
           <h2 className="text-[27px] text-[#2e2f38] mb-[20px] font-bold">
             We are with you ,<br /> every step of the way
@@ -48,7 +48,7 @@ const Support = () => {
             <button className={style.support_button}>start with us now</button>
           </p>
         </div>
-        <div className="flex-1 max-w-[41.667%]  ">
+        <div className="flex-1 hidden tablet:block max-w-[41.667%]  ">
           <div className={`${style.hover_box_container} relative`}>
             <a
               href="#"

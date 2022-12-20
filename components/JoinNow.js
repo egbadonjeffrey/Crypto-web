@@ -16,18 +16,30 @@ const JoinNow = () => {
           </p>
         </div>
         <div className="flex justify-between items-center">
-          <Link
-            href="/signup"
-            className="uppercase flex justify-center w-[100px] h-[50px] bg-[#8065ff] hover:bg-[#8165ff81] text-center items-center text-[13px]  mx-[5px] my-[5px] rounded-full "
-          >
-            sign up
-          </Link>
-          <Link
-            href="/login"
-            className="uppercase flex justify-center w-[100px] h-[50px] bg-[#fff] hover:bg-[#ccc] text-[#8065ff] text-center items-center text-[13px]  mx-[5px] my-[5px] rounded-full "
-          >
-            log in
-          </Link>
+          {[
+            {
+              link: "/signup",
+              name: "signup",
+            },
+            {
+              link: "/login",
+              name: "login",
+            },
+          ].map((join, index) => (
+            <Link
+              key={index}
+              href={join.link}
+              className={`uppercase flex justify-center w-[100px] h-[40px] ${
+                index < 1 ? "bg-[#8065ff]" : "bg-[#fff]"
+              }
+              ${index > 0 && "text-[#8065ff]"}
+               ${
+                 index < 1 ? "hover:bg-[#8165ff81]" : "hover:bg-[#ccc]"
+               }   text-center items-center text-[13px]  mx-[5px] my-[5px] rounded-full `}
+            >
+              {join.name}
+            </Link>
+          ))}
         </div>
       </div>
     </div>

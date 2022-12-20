@@ -13,8 +13,14 @@
     box-shadow: 0 10px 100px 0 rgb(77 77 119 / 16%);
     letter-spacing: .05px;
     font-size: 15px;
+    font-weight: bold;
     text-decoration: none;
     border-radius: 6px;
+}
+.support_button:hover {
+    background-color: #6610f2;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
 }
 .hover_box_container {
     position: relative;

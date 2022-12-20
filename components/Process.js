@@ -38,13 +38,13 @@ const Process = () => {
       {process.map((data, index) => (
         <div
           key={index}
-          className={`${style.processContainer} relative flex-1 bg-white p-7 ${
+          className={`${style.processContainer} relative flex-1 bg-white p-5 ${
             index < 1 ? "h-auto" : "h-[14rem]"
           } rounded-lg  border-solid border-2 border-#eaeef1] `}
         >
           {data.image}
           <h2 className="text-[17px] font-bold mb-[0.5rem] font-poppins ">
-            {data.title} - {index}
+            {data.title}
           </h2>
           <p className="font-quicksand "> {data.description} </p>
         </div>
