@@ -26,7 +26,7 @@ const Plans = () => {
           {["forex", "crypto"].map((data, index) => (
             <div
               key={index}
-              className={`text-center p-4 w-[50%] font-bold capitalize ${
+              className={`text-center p-4 w-[50%] font-bold capitalize cursor-pointer ${
                 plan === data && style.active
               }`}
               onClick={() => setPlan(data)}

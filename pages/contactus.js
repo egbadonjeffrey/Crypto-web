@@ -6,12 +6,12 @@ import style from "../styles/contact.module.css";
 
 import { BsFacebook, BsTwitter } from "react-icons/bs";
 import { RiInstagramFill } from "react-icons/ri";
-import { useEffect } from "react";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 const Contactus = () => {
   return (
     <Layout title="Contact us">
-      <main className="flex flex-col gap-[3rem] h-[80vh] z-10 mt-[10%]">
+      <main className="relative flex flex-col gap-[3rem] h-[80vh] z-10 mt-[10%]">
         <div className="flex flex-row justify-between gap-[1rem] w-[70%] mx-auto ">
           <div className="flex-[41.7] my-[7rem] text-left ">
             <h5 className="flex flex-col gap-[.7rem] font-poppins text-4xl font-extrabold text-white  ">
@@ -60,26 +60,34 @@ const Contactus = () => {
 
         <section className=" w-[70%] mx-auto  -mt-[7rem]  ">
           <div className="flex flex-col gap-[1rem] text-left w-[35%]">
-            <h3 className="font-bold text-[20px]  ">
+            <h3 className="font-bold font-quicksand text-[20px]  ">
               Need some help immediately ?
             </h3>
-            <p className="text-[14px]">our support team here for you 24/7</p>
+            <p className="text-[14px] text-[#818181]">
+              our support team here for you 24/7
+            </p>
             <div className="flex flex-col justify-between">
               <Link
                 href="#"
-                className="font-bold font-poppins text-[#03A9F4] text-[15px] "
+                className="font-bold font-poppins text-[#03A9F4] text-[14px] "
               >
                 +1 333 888 9999
               </Link>
               <Link
                 href="#"
-                className="font-bold font-poppins text-[#03A9F4] text-[15px] "
+                className="font-bold font-poppins text-[#03A9F4] text-[14px] "
               >
                 support@alphfxtradings.com
               </Link>
             </div>
           </div>
         </section>
+        <a
+          href=""
+          className="fixed bottom-[25px] w-[4rem] h-[4rem] bg-white rounded-full ml-[3rem] "
+        >
+          <IoLogoWhatsapp className="w-[4rem] h-[4rem] text-[#00d463] " />
+        </a>
       </main>
     </Layout>
   );
@@ -89,7 +97,7 @@ export default Contactus;
 
 const Form = () => {
   return (
-    <div className="py-10 px-7 h-auto  ">
+    <div className="py-10 px-7 h-auto   ">
       <h3 className="flex flex-col text-[20px] text-[#2f3538] font-[900] font-poppins ">
         Get in Touch
         <span className="text-[14px] font-normal ">

@@ -11,7 +11,7 @@ const particlesConfig = {
     left: "0",
     right: "0",
     width: "100%",
-    height: "65%",
+    height: "60%",
     zIndex: "-10",
     background: "linear-gradient(to bottom right,#79799c,#131327)",
   },

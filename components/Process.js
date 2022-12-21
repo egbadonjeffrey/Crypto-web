@@ -3,7 +3,6 @@ import React from "react";
 
 import { FaChartLine, FaCreditCard, FaWallet } from "react-icons/fa";
 
-import Deposit from "../public/images/background/bg-9.jpg";
 import style from "../styles/process.module.css";
 
 const Process = () => {
@@ -32,7 +31,6 @@ const Process = () => {
     },
   ];
 
-  // console.log(process);
   return (
     <div className={`flex gap-5 -mt-[1rem] w-[70%] mx-auto`}>
       {process.map((data, index) => (

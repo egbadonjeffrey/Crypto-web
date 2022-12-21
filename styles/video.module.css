@@ -1,3 +1,6 @@
+.particle {
+ @apply w-full h-[30vh];
+}
 .particle::before {
       content: '';
       width: 100px;
