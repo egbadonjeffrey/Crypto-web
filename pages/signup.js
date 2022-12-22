@@ -6,6 +6,71 @@ import style from "../styles/contact.module.css";
 import moment from "moment/moment";
 import Layout from "../components/Layout";
 
+const Country = [
+  {
+    id: 1,
+    name: "Select Your Country",
+  },
+  {
+    id: 2,
+    name: "Nigeria",
+  },
+  {
+    id: 3,
+    name: "Ghana",
+  },
+  {
+    id: 4,
+    name: "Egypt",
+  },
+  {
+    id: 5,
+    name: "Morocco",
+  },
+  {
+    id: 6,
+    name: "Argentina",
+  },
+];
+
+const Currency = [
+  {
+    id: 1,
+    name: "Select Your Currency",
+    symbol: "",
+  },
+  {
+    id: 2,
+    name: "United States Dollar",
+    symbol: "$",
+  },
+  {
+    id: 3,
+    name: "Australia Dollar",
+    symbol: "A$",
+  },
+  {
+    id: 4,
+    name: "Canada Dollar",
+    symbol: "C$",
+  },
+  {
+    id: 5,
+    name: "Euro",
+    symbol: "€",
+  },
+  {
+    id: 6,
+    name: "United Kingdom Pounds",
+    symbol: "£",
+  },
+  {
+    id: 7,
+    name: "Japan Yen",
+    symbol: "¥",
+  },
+];
+
 const Signup = () => {
   const [currentTime, setCurrentTime] = useState();
 
@@ -27,15 +92,16 @@ const Signup = () => {
       clearInterval(timer);
     };
   });
+
   return (
     <Layout title="Sign up">
       <div className="flex flex-col gap-[2rem] h-auto mt-[10%] ">
         <div className="w-[70%] mx-auto ">
           <h5 className="flex flex-col gap-[2rem] justify-between ">
             <span className="text-[#bed1d9] font-bold text-center mb-[2rem] ">
-              <p className="text-center mt-[3rem] ">
-                {day + " " + date + " " + time}
-              </p>
+              <span className="text-center mt-[3rem] ">
+                {day + " " + date + " " + currentTime}
+              </span>
             </span>
             <span className="text-left text-white font-bold ">Sign up</span>
           </h5>
@@ -52,28 +118,49 @@ const Signup = () => {
 export default Signup;
 
 const Form = () => {
+  const [countries, setCountries] = useState([]);
+  const [country, setCountry] = useState("Select Your Country");
+  const [currencies, setCurrencies] = useState([]);
+  const [currency, setCurrency] = useState("Select Your Currency");
+
+  useEffect(() => {
+    setCountries(Country);
+  }, []);
+
+  useEffect(() => {
+    setCurrencies(Currency);
+  }, []);
+
+  const handleCountry = (name) => {
+    setCountry(name);
+  };
+
+  const handleCurrency = (name) => {
+    setCurrency(name);
+  };
+
   return (
     <div className="py-10 px-7 w-[60%] h-auto  ">
       <h2 className=" font-bold text-white text-[30px] ">
         Fill in your correct details
       </h2>
       <form className="text-[#767676] ">
-        <div class="relative">
+        <div className="relative">
           <input
             type="text"
             id="firstname"
-            class={`${style.inputField} block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-white rounded-lg border-1  border-gray-300  text-white border-gray-600 focus:border-blue-500  focus:ring-0 focus:border-blue-600 peer mt-[2rem] `}
+            className={`${style.inputField} block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-white rounded-lg border-1  border-gray-300  text-white border-gray-600 focus:border-blue-500  focus:ring-0 focus:border-blue-600 peer mt-[2rem] `}
             placeholder=" "
           />
           <label
-            for="firstname"
-            class="absolute text-sm text-gray-500 text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white  px-1 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
+            htmlFor="firstname"
+            className="absolute text-sm text-gray-500 text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white  px-1 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
           >
             Enter your First Name
           </label>
         </div>
 
-        <div class="relative">
+        <div className="relative">
           <input
             type="text"
             id="lastname"
@@ -81,98 +168,146 @@ const Form = () => {
             placeholder=" "
           />
           <label
-            for="lastname"
-            class="absolute text-sm text-gray-500 text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white  px-1 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
+            htmlFor="lastname"
+            className="absolute text-sm text-gray-500 text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white  px-1 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
           >
             Enter your Last Name
           </label>
         </div>
 
-        <div class="relative">
+        <div className="relative">
           <input
             type="phone"
             id="phone"
-            class={`${style.inputField} block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-white rounded-lg border-1  border-gray-300  text-white border-gray-600 focus:border-blue-500  focus:ring-0 focus:border-blue-600 peer mt-[2rem] `}
+            className={`${style.inputField} block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-white rounded-lg border-1  border-gray-300  text-white border-gray-600 focus:border-blue-500  focus:ring-0 focus:border-blue-600 peer mt-[2rem] `}
             placeholder=" "
           />
           <label
-            for="phone"
-            class="absolute text-sm text-gray-500 text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white  px-1 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
+            htmlFor="phone"
+            className="absolute text-sm text-gray-500 text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white  px-1 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
           >
             Enter your Phone Number
           </label>
         </div>
 
-        <div class="relative">
+        <div className="relative">
+          <select
+            id="country"
+            className={`${style.inputField} block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-white rounded-lg border-1  border-gray-300  text-white border-gray-600 focus:border-blue-500  focus:ring-0 focus:border-blue-600 peer mt-[2rem] `}
+            onChange={(e) => handleCountry(e.target.value)}
+          >
+            {countries && countries !== undefined
+              ? countries.map((ctr, index) => {
+                  return (
+                    <option key={index} value={ctr.name}>
+                      {ctr.name}
+                    </option>
+                  );
+                })
+              : "No Country"}
+          </select>
+          <label
+            htmlFor="country"
+            className="absolute text-sm text-gray-500 text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white  px-1 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
+          >
+            {country}
+          </label>
+        </div>
+
+        <div className="relative">
+          <select
+            id="country"
+            className={`${style.inputField} block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-white rounded-lg border-1  border-gray-300  text-white border-gray-600 focus:border-blue-500  focus:ring-0 focus:border-blue-600 peer mt-[2rem] `}
+            onChange={(e) => handleCurrency(e.target.value)}
+          >
+            {currencies && currencies !== undefined
+              ? currencies.map((ctr, index) => {
+                  return (
+                    <option key={index} value={ctr.name}>
+                      {ctr.name + " " + ctr.symbol}
+                    </option>
+                  );
+                })
+              : "No Currency Available"}
+          </select>
+          <label
+            htmlFor="country"
+            className="absolute text-sm text-gray-500 text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white  px-1 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
+          >
+            {currency}
+          </label>
+        </div>
+
+        <div className="relative">
           <input
             type="text"
             id="state"
-            class={`${style.inputField} block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-white rounded-lg border-1  border-gray-300  text-white border-gray-600 focus:border-blue-500  focus:ring-0 focus:border-blue-600 peer mt-[2rem] `}
+            className={`${style.inputField} block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-white rounded-lg border-1  border-gray-300  text-white border-gray-600 focus:border-blue-500  focus:ring-0 focus:border-blue-600 peer mt-[2rem] `}
             placeholder=" "
           />
           <label
-            for="state"
-            class="absolute text-sm text-gray-500 text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white  px-1 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
+            htmlFor="state"
+            className="absolute text-sm text-gray-500 text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white  px-1 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
           >
             State
           </label>
         </div>
 
-        <div class="relative">
+        <div className="relative">
           <input
             type="email"
             id="email"
-            class={`${style.inputField} block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-white rounded-lg border-1  border-gray-300  text-white border-gray-600 focus:border-blue-500  focus:ring-0 focus:border-blue-600 peer mt-[2rem] `}
+            className={`${style.inputField} block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-white rounded-lg border-1  border-gray-300  text-white border-gray-600 focus:border-blue-500  focus:ring-0 focus:border-blue-600 peer mt-[2rem] `}
             placeholder=" "
           />
           <label
-            for="email"
-            class="absolute text-sm text-gray-500 text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white  px-1 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
+            htmlFor="email"
+            className="absolute text-sm text-gray-500 text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white  px-1 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
           >
             Enter your Email
           </label>
         </div>
 
-        <div class="relative">
+        <div className="relative">
           <input
             type="text"
             id="dateofbirth"
-            class={`${style.inputField} block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-white rounded-lg border-1  border-gray-300  text-white border-gray-600 focus:border-blue-500  focus:ring-0 focus:border-blue-600 peer mt-[2rem] `}
+            className={`${style.inputField} block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-white rounded-lg border-1  border-gray-300  text-white border-gray-600 focus:border-blue-500  focus:ring-0 focus:border-blue-600 peer mt-[2rem] `}
             placeholder=" "
           />
           <label
-            for="dateofbirth"
-            class="absolute text-sm text-gray-500 text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white  px-1 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
+            htmlFor="dateofbirth"
+            className="absolute text-sm text-gray-500 text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white  px-1 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
           >
-            DOB dd/mm/yy
+            Date of Birth dd/mm/yy
           </label>
         </div>
 
-        <div class="relative">
+        <div className="relative">
           <input
             type="password"
             id="password"
-            class={`${style.inputField} block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-white rounded-lg border-1  border-gray-300  text-white border-gray-600 focus:border-blue-500  focus:ring-0 focus:border-blue-600 peer mt-[2rem] `}
+            className={`${style.inputField} block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-white rounded-lg border-1  border-gray-300  text-white border-gray-600 focus:border-blue-500  focus:ring-0 focus:border-blue-600 peer mt-[2rem] `}
             placeholder=" "
           />
           <label
-            for="password"
-            class="absolute text-sm text-gray-500 text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white  px-1 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
+            htmlFor="password"
+            className="absolute text-sm text-gray-500 text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white  px-1 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
           >
             Password
           </label>
         </div>
 
-        <div class="relative">
+        <div className="relative">
           <input
             type="password"
             id="confirmpassword"
-            class={`${style.inputField} block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-white rounded-lg border-1  border-gray-300  text-white border-gray-600 focus:border-blue-500  focus:ring-0 focus:border-blue-600 peer mt-[2rem] `}
+            className={`${style.inputField} block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-white rounded-lg border-1  border-gray-300  text-white border-gray-600 focus:border-blue-500  focus:ring-0 focus:border-blue-600 peer mt-[2rem] `}
             placeholder=" "
           />
           <label
-            for="confirmpassword"
-            class="absolute text-sm text-gray-500 text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white  px-1 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
+            htmlFor="confirmpassword"
+            className="absolute text-sm text-gray-500 text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white  px-1 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
           >
             Re-Enter Password
           </label>

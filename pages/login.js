@@ -40,7 +40,7 @@ const Login = () => {
           </h5>
         </div>
 
-        <div className=" w-[70%] mx-auto my-[2rem] py-[2rem] px-[2rem] ">
+        <div className=" w-[70%] mx-auto my-[2rem] py-[2rem] px-[2rem] -mt-[5%] ">
           <Form />
         </div>
       </div>
@@ -52,45 +52,42 @@ export default Login;
 
 const Form = () => {
   return (
-    <div className="py-10 px-7 w-[60%] h-auto  ">
+    <div className="py-10 px-7 w-[55%] h-auto  ">
       <h2 className=" font-bold text-white text-[30px] ">
         Fill in your correct details
       </h2>
       <form className=" ">
-        <div
-          class={`${style.inputContainer} relative w-full  flex flex-col my-[1.5rem] `}
-        >
+        <div className="relative">
           <input
             type="text"
-            id="email"
-            className={`${style.inputField} py-3 px-3`}
+            id="firstname"
+            className={`${style.inputField} block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-white rounded-lg border-1  border-gray-300  text-white border-gray-600 focus:border-blue-500  focus:ring-0 focus:border-blue-600 peer mt-[2rem] `}
+            placeholder=" "
           />
           <label
-            htmlFor="email"
-            className="absolute px-4 py-4   duration-300 text-[13px]"
+            for="firstname"
+            className="absolute text-sm text-gray-500 text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white  px-1 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
           >
-            Enter your email
+            Your Email
           </label>
         </div>
 
-        <div
-          className={`${style.inputContainer} relative w-full  flex flex-col my-[1.5rem] `}
-        >
+        <div className="relative">
           <input
-            type="password"
-            id="password"
-            className={`${style.inputField} py-3 px-3`}
-            required
+            type="text"
+            id="firstname"
+            class={`${style.inputField} block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-white rounded-lg border-1  border-gray-300  text-white border-gray-600 focus:border-blue-500  focus:ring-0 focus:border-blue-600 peer mt-[2rem] `}
+            placeholder=" "
           />
           <label
-            htmlFor="password"
-            className="absolute  px-4 py-4  duration-300 text-[13px]"
+            for="firstname"
+            className="absolute text-sm text-gray-500 text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white  px-1 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1"
           >
-            Enter your password
+            Enter your Password
           </label>
         </div>
 
-        <button className="w-full h-[40px] font-medium uppercase font-poppins bg-[#04a9f5b0] hover:bg-[#04a9f5] text-white mt-[1rem] rounded-lg tracking-wider ">
+        <button className="w-full h-[40px] font-medium uppercase font-poppins bg-[#04a9f5] hover:bg-[#199cd9] text-white mt-[1rem] rounded-lg tracking-wider ">
           Login
         </button>
       </form>

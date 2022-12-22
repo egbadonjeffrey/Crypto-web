@@ -30,7 +30,7 @@ const Footer = () => {
                   <Link href="/login">Login</Link>
                 </li>
                 <li className={`${style.item}`}>
-                  <Link href="/getstarted">Get Started</Link>
+                  <Link href="/signup">Get Started</Link>
                 </li>
               </ul>
               <ul>
