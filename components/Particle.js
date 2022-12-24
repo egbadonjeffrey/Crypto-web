@@ -22,7 +22,8 @@ const Particle = () => {
   }, []);
 
   return (
-    <div className={`${style.particle}`}>
+    <div>
+      <div className={`${style.particle} tablet:block hidden`}></div>
       <Particles
         id="tsparticles"
         init={particlesInit}

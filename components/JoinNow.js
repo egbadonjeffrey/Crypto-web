@@ -4,7 +4,7 @@ import React from "react";
 const JoinNow = () => {
   return (
     <div className=" py-[70px] bg-[#2d2d44] text-white ">
-      <div className="flex justify-between items-center w-[70%] mx-auto">
+      <div className="flex flex-col tablet:flex-row gap-[1rem] justify-between items-center w-[70%] mx-auto">
         <div className="flex justify-between flex-col flex-1 ">
           <h1 className="capitalize text-[20px] font-bold">
             Join Now and Enjoy financial freedom

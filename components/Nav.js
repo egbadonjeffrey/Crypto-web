@@ -42,7 +42,7 @@ const Nav = () => {
         nav ? "bg-white" : ""
       } w-full fixed top-0 left-0 right-0 py-5 h-auto z-50 transition ease-in-out duration-500 `}
     >
-      <nav className="flex   justify-between  items-center z-50 w-[70%] my-[1rem] mx-auto">
+      <nav className="flex   justify-between  items-center z-50 w-[90%] tablet:w-[70%] my-[1rem] mx-auto">
         <Link href="/" className={`flex-1`}>
           <Image src={logo} alt="White Logo" width={200} height={100} />
         </Link>
@@ -154,39 +154,39 @@ const Nav = () => {
               className={`
               bg-[#151621] px-[1rem] py-[2rem] ${
                 menu ? "left-0" : "-left-[500px]"
-              } fixed h-full w-full max-w-[30rem] top-0 z-40 ease-in-out duration-300`}
+              } text-[10px] tablet:text-[20px] fixed h-full w-[60%] max-w-[30rem] top-0 z-40 ease-in-out duration-300`}
             >
-              <ul className="flex flex-col h-[50%] gap-[1rem] pt-7">
+              <ul className="flex flex-col h-[50%] gap-[.5rem] pt-7">
                 <Link
                   href="/"
-                  className="text-[20px] text-[#edf1f3] font-bold font-poppins font-[700] py-[0.9rem] px-[0.7rem] pl-[2rem]  border-b-[.5px]  "
+                  className=" text-[#edf1f3] font-bold font-poppins font-[700] py-[0.9rem] px-[0.7rem] pl-[2rem]  border-b-[.1px] tablet:border-b-[.5px]  "
                 >
                   Home
                 </Link>
                 <Link
                   href="/guide"
-                  className="text-[20px] text-[#edf1f3] font-bold font-poppins font-[700] py-[0.9rem] px-[0.7rem] pl-[2rem]  border-b-[.5px]  "
+                  className=" text-[#edf1f3] font-bold font-poppins font-[700] py-[0.9rem] px-[0.7rem] pl-[2rem]  border-b-[.5px]  "
                   onClick={() => setMenu(false)}
                 >
                   Guide
                 </Link>
                 <Link
                   href="/regulation"
-                  className="text-[20px] text-[#edf1f3] font-bold font-poppins font-[700] py-[0.9rem] px-[0.7rem] pl-[2rem] border-b-[.3px]  "
+                  className=" text-[#edf1f3] font-bold font-poppins font-[700] py-[0.9rem] px-[0.7rem] pl-[2rem] border-b-[.3px]  "
                   onClick={() => setMenu(false)}
                 >
                   Regulation
                 </Link>
                 <Link
                   href="#"
-                  className="text-[20px] text-[#edf1f3] font-bold font-poppins font-[700] py-[0.9rem] px-[0.7rem] pl-[2rem] border-b-[.3px]  "
+                  className=" text-[#edf1f3] font-bold font-poppins font-[700] py-[0.9rem] px-[0.7rem] pl-[2rem] border-b-[.3px]  "
                   onClick={() => setMenu(false)}
                 >
                   Open Trade
                 </Link>
                 <Link
                   href="#"
-                  className="text-[20px] text-[#edf1f3] font-bold font-poppins font-[700] py-[0.9rem] px-[0.7rem] pl-[2rem] border-b-[.3px]  "
+                  className=" text-[#edf1f3] font-bold font-poppins font-[700] py-[0.9rem] px-[0.7rem] pl-[2rem] border-b-[.3px]  "
                   onClick={() => setMenu(false)}
                 >
                   Try demo
@@ -195,7 +195,7 @@ const Nav = () => {
                   as="div"
                   className="relative inline-block border-b-[.3px] "
                 >
-                  <Menu.Button className="text-[20px] text-[#edf1f3] font-bold font-poppins font-[700] py-[0.9rem] px-[0.7rem] pl-[2rem] ">
+                  <Menu.Button className="text-[#edf1f3] font-bold font-poppins font-[700] py-[0.9rem] px-[0.7rem] pl-[2rem] ">
                     Account
                   </Menu.Button>
                   <Menu.Items className="absolute top-10 right-0 w-40 origin-top-left bg-white shadow-lg rounded-lg overflow-hidden z-50">
@@ -222,7 +222,7 @@ const Nav = () => {
                 </Menu>
                 <Link
                   href="/contactus"
-                  className="text-[20px] text-[#edf1f3] font-bold font-poppins font-[700] py-[0.9rem] px-[0.7rem] pl-[2rem] border-b-[.3px]  "
+                  className=" text-[#edf1f3] font-bold font-poppins font-[700] py-[0.9rem] px-[0.7rem] pl-[2rem] border-b-[.3px]  "
                   onClick={() => setMenu(false)}
                 >
                   Contact us

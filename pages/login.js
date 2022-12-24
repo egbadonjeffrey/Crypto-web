@@ -28,7 +28,7 @@ const Login = () => {
   });
   return (
     <Layout title="Login page">
-      <div className="flex flex-col gap-[2rem] h-auto mt-[10%] ">
+      <div className="flex flex-col gap-[2rem] h-auto mt-[20%] tablet:mt-[10%] ">
         <div className="w-[70%] mx-auto ">
           <h5 className="flex flex-col gap-[2rem] justify-between ">
             <span className="text-[#bed1d9] font-bold text-center mb-[2rem] ">

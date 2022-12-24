@@ -14,10 +14,10 @@ const Aboutus = () => {
   return (
     <div className={`${style.aboutus} relative  `}>
       <div className="w-[70%] mx-auto py-[50px]">
-        <div className="flex gap-[2rem] justify-center items-center ">
+        <div className="flex flex-col tablet:flex-row gap-[2rem] justify-center items-center ">
           <div className="chart flex-1">{/* <AdvancedChart /> */}</div>
-          <div className="about_text flex-1 text-white">
-            <div className=" flex flex-col text-right gap-[1rem] ">
+          <div className="about_text flex-1 text-white ">
+            <div className=" flex flex-col text-center table:text-right gap-[1rem] w-full ">
               <h3 className="text-base mb-[.5rem] font-medium">
                 alphfxtrading
               </h3>
@@ -33,9 +33,12 @@ const Aboutus = () => {
                 invest is 100% insured
               </p>
             </div>
-            <div className="legend_count flex flex-row">
+            <div className="legend_count flex tablet:flex-row flex-col items-center">
               {Legend.map((legend, index) => (
-                <div key={index} className="flex-1 max-w-[33.33%]">
+                <div
+                  key={index}
+                  className="flex-1 max-w-full tablet:max-w-[33.33%] text-center"
+                >
                   <div className="flex justify-end items-center gap-[.5rem]">
                     <span className="text-[36px] text-[#ffeb3b] font-bold">
                       <ScrollTrigger
@@ -49,7 +52,10 @@ const Aboutus = () => {
                     </span>
                     {legend.image}
                   </div>
-                  <h6 className="text-right uppercase"> {legend.details} </h6>
+                  <h6 className="text-right font-bold uppercase">
+                    {" "}
+                    {legend.details}{" "}
+                  </h6>
                 </div>
               ))}
             </div>

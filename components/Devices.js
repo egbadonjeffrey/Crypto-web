@@ -8,30 +8,39 @@ const Devices = () => {
   const devices = [
     {
       id: 1,
-      image: <MdOutlinePhoneAndroid className="w-full h-full text-[#5769cc]" />,
+      image: (
+        <MdOutlinePhoneAndroid className="w-[30%] tablet:w-full  h-full text-[#5769cc]" />
+      ),
       name: "Andriod",
     },
     {
       id: 2,
-      image: <FaLaptop className="w-full h-full text-[#5769cc]" />,
+      image: (
+        <FaLaptop className="w-[30%] tablet:w-ful h-full text-[#5769cc]" />
+      ),
       name: "Windows",
     },
     {
       id: 3,
       image: (
-        <MdOutlinePhoneAndroid className="w-[3rem] h-full text-[#5769cc]" />
+        <MdOutlinePhoneAndroid className="w-[30%] tablet:w-ful h-full text-[#5769cc]" />
       ),
       name: "IOS",
     },
     {
       id: 4,
-      image: <FaLaptop className="w-full h-full text-[#5769cc]" />,
+      image: (
+        <FaLaptop className="w-[30%] tablet:w-ful h-full text-[#5769cc]" />
+      ),
       name: "MacOS",
     },
   ];
 
   return (
-    <div className="flex justify-between w-[70%] mx-auto my-[3rem]  ">
+    <div className="flex flex-col tablet:flex-row gap-[1rem] justify-between w-[70%] mx-auto my-[3rem]  ">
+      <h2 className="text-[1.5rem] text-center font-bold capitalize">
+        made for all devices
+      </h2>
       {devices.map((device, index) => (
         <div
           key={index}
