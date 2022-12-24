@@ -11,17 +11,17 @@ import { IoLogoWhatsapp } from "react-icons/io";
 const Contactus = () => {
   return (
     <Layout title="Contact us">
-      <main className="relative flex flex-col gap-[3rem] h-[80vh] z-10 mt-[10%]">
-        <div className="flex flex-row justify-between gap-[1rem] w-[70%] mx-auto ">
+      <main className="relative flex flex-col gap-[3rem] h-auto z-10 mt-[10%]">
+        <div className="flex flex-col laptop:flex-row justify-between gap-[2rem] w-[90%] tablet:w-[70%] mx-auto ">
           <div className="flex-[41.7] my-[7rem] text-left ">
-            <h5 className="flex flex-col gap-[.7rem] font-poppins text-4xl font-extrabold text-white  ">
+            <h5 className="flex flex-col gap-[.7rem] font-poppins text-4xl laptop:text-2xl font-extrabold text-white mt-[3rem]  ">
               <span className="text-[15px] font-bold text-[#aebfc7] ">
                 You still got questions ?
               </span>
               You Can talk to us.
             </h5>
 
-            <div className="my-[1rem] ">
+            <div className="my-[1rem]  mt-[3rem]  ">
               <span className="font-[700] mb-[.7rem] text-white ">
                 <Link href="/" className="text-[blue] hover:text-[#007bff]  ">
                   Homepage
@@ -29,7 +29,7 @@ const Contactus = () => {
                 {" - contact us"}
               </span>
 
-              <div className="flex gap-[1.5rem] w-[40%] ">
+              <div className="flex gap-[1.5rem] w-[80%]">
                 <Link
                   href="#"
                   className="relative rounded-full bg-[#007bff] w-[30px] h-[30px] my-[1rem]  "
@@ -52,14 +52,14 @@ const Contactus = () => {
             </div>
           </div>
           <div
-            className={`${style.contactForm} flex-[58.3] bg-white mt-[5rem] h-[60vh] py-7 px-7  `}
+            className={`${style.contactForm} flex-[58.3] w-full  bg-white mb-0 tablet:mb-[6rem] laptop:mt-[5rem] h-auto py-5 px-5  `}
           >
             <Form />
           </div>
         </div>
 
-        <section className=" w-[70%] mx-auto  -mt-[7rem]  ">
-          <div className="flex flex-col gap-[1rem] text-left w-[35%]">
+        <section className="w-[70%] mx-auto  my-[2rem] tablet:-mt-[7rem]  ">
+          <div className="flex flex-col gap-[1rem] text-left w-full laptop:-mt-[30%] desktop:-mt-[25%]  laptop:w-[40%]">
             <h3 className="font-bold font-quicksand text-[20px]  ">
               Need some help immediately ?
             </h3>

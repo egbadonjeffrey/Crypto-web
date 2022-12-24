@@ -9,47 +9,49 @@ const Devices = () => {
     {
       id: 1,
       image: (
-        <MdOutlinePhoneAndroid className="w-[30%] tablet:w-full  h-full text-[#5769cc]" />
+        <MdOutlinePhoneAndroid className="w-[20%]  tablet:w-full laptop:w-full   h-full text-[#5769cc]" />
       ),
       name: "Andriod",
     },
     {
       id: 2,
       image: (
-        <FaLaptop className="w-[30%] tablet:w-ful h-full text-[#5769cc]" />
+        <FaLaptop className="w-[20%]  tablet:w-full laptop:w-full  h-full text-[#5769cc]" />
       ),
       name: "Windows",
     },
     {
       id: 3,
       image: (
-        <MdOutlinePhoneAndroid className="w-[30%] tablet:w-ful h-full text-[#5769cc]" />
+        <MdOutlinePhoneAndroid className="w-[20%]  tablet:w-[4rem] laptop:w-[4rem]  h-full text-[#5769cc]" />
       ),
       name: "IOS",
     },
     {
       id: 4,
       image: (
-        <FaLaptop className="w-[30%] tablet:w-ful h-full text-[#5769cc]" />
+        <FaLaptop className="w-[20%] tablet:w-[4rem] laptop:w-full  h-full text-[#5769cc]" />
       ),
       name: "MacOS",
     },
   ];
 
   return (
-    <div className="flex flex-col tablet:flex-row gap-[1rem] justify-between w-[70%] mx-auto my-[3rem]  ">
-      <h2 className="text-[1.5rem] text-center font-bold capitalize">
+    <div>
+      <h2 className="text-[1.5rem] text-center font-bold capitalize mb-[2rem]">
         made for all devices
       </h2>
-      {devices.map((device, index) => (
-        <div
-          key={index}
-          className="devices flex flex-col justify-between items-center"
-        >
-          {device.image}
-          <span>{device.name}</span>
-        </div>
-      ))}
+      <div className="flex flex-col tablet:flex-row gap-[1rem] justify-between w-[70%] mx-auto my-[3rem]  ">
+        {devices.map((device, index) => (
+          <div
+            key={index}
+            className="devices flex flex-col justify-between items-center"
+          >
+            {device.image}
+            <span className="font-bold">{device.name}</span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

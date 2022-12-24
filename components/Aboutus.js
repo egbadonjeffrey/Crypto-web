@@ -15,13 +15,15 @@ const Aboutus = () => {
     <div className={`${style.aboutus} relative  `}>
       <div className="w-[70%] mx-auto py-[50px]">
         <div className="flex flex-col tablet:flex-row gap-[2rem] justify-center items-center ">
-          <div className="chart flex-1">{/* <AdvancedChart /> */}</div>
-          <div className="about_text flex-1 text-white ">
-            <div className=" flex flex-col text-center table:text-right gap-[1rem] w-full ">
+          <div className="chart flex-1 hidden tablet:block">
+            {/* <AdvancedChart /> */}
+          </div>
+          <div className="about_text tablet:flex-1 text-white ">
+            <div className=" flex flex-col text-center tablet:text-right gap-[1rem] w-full ">
               <h3 className="text-base mb-[.5rem] font-medium">
                 alphfxtrading
               </h3>
-              <h2 className="text-6xl text-[#ffc107] font-semibold mb-[.5rem]">
+              <h2 className="text-5xl text-[#ffc107] font-semibold mb-[.5rem]">
                 more about us
               </h2>
               <p className="mb-[2rem] text-[14px] ">
@@ -33,13 +35,10 @@ const Aboutus = () => {
                 invest is 100% insured
               </p>
             </div>
-            <div className="legend_count flex tablet:flex-row flex-col items-center">
+            <div className="legend_count flex tablet:flex-row gap-[2rem] flex-col items-center tablet:text-right w-[60%] tablet:w-full mx-auto ">
               {Legend.map((legend, index) => (
-                <div
-                  key={index}
-                  className="flex-1 max-w-full tablet:max-w-[33.33%] text-center"
-                >
-                  <div className="flex justify-end items-center gap-[.5rem]">
+                <div key={index} className="flex-1 w-full tablet:w-[33.33%] ">
+                  <div className="flex justify-center tablet:justify-end items-center gap-[.5rem]">
                     <span className="text-[36px] text-[#ffeb3b] font-bold">
                       <ScrollTrigger
                         onEnter={() => setCounterOn(true)}
@@ -52,7 +51,7 @@ const Aboutus = () => {
                     </span>
                     {legend.image}
                   </div>
-                  <h6 className="text-right font-bold uppercase">
+                  <h6 className="text-center tablet:text-right font-bold uppercase">
                     {" "}
                     {legend.details}{" "}
                   </h6>

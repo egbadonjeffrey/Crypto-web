@@ -96,18 +96,20 @@ const Signup = () => {
   return (
     <Layout title="Sign up">
       <div className="flex flex-col gap-[2rem] h-auto mt-[10%] ">
-        <div className="w-[70%] mx-auto ">
+        <div className="w-[90%] tablet:w-[70%] mx-auto mt-[5rem] ">
           <h5 className="flex flex-col gap-[2rem] justify-between ">
             <span className="text-[#bed1d9] font-bold text-center mb-[2rem] ">
-              <span className="text-center mt-[3rem] ">
-                {day + " " + date + " " + currentTime}
-              </span>
+              <p className="text-center mt-[3rem] ">
+                {day + " " + date + " " + time}
+              </p>
             </span>
-            <span className="text-left text-white font-bold ">Sign up</span>
+            <span className="text-center text-[1.75rem] font-bold text-[#d1d1d1]  ">
+              Sign up
+            </span>
           </h5>
         </div>
 
-        <div className=" w-[70%] mx-auto my-[2rem] py-[2rem] px-[2rem] ">
+        <div className="w-full tablet:w-[70%] mx-auto my-[2rem] py-[2rem] px-[2rem] ">
           <Form />
         </div>
       </div>
@@ -140,8 +142,8 @@ const Form = () => {
   };
 
   return (
-    <div className="py-10 px-7 w-[60%] h-auto  ">
-      <h2 className=" font-bold text-white text-[30px] ">
+    <div className="py-10 px-7 w-full  h-auto  ">
+      <h2 className=" font-bold text-[#ebebebc0] text-[30px] -mt-[5rem] ">
         Fill in your correct details
       </h2>
       <form className="text-[#767676] ">
@@ -312,12 +314,13 @@ const Form = () => {
             Re-Enter Password
           </label>
         </div>
-
-        <button className="w-full h-[40px] font-medium uppercase font-poppins bg-[#04a9f5b0] hover:bg-[#04a9f5] text-white mt-[1rem] rounded-lg tracking-wider ">
-          Sign up
-        </button>
+        <div className="w-full text-center">
+          <button className="w-full laptop:w-[50%] h-[40px]   font-medium uppercase font-poppins bg-[#04a9f5b0] hover:bg-[#04a9f5] text-white mt-[1rem] rounded-lg tracking-wider ">
+            Sign up
+          </button>
+        </div>
       </form>
-      <div className="flex flex-row gap-[1rem] w-full mt-[2rem] px-[1rem] ">
+      <div className="flex flex-col text-center tablet:text-left tablet:flex-row gap-[1rem] w-full mt-[2rem] px-[1rem] ">
         <span className="text-[#222425] ">Already have an account ?</span>
         <Link href="/login" className="text-[#04a9f5] hover:underline ">
           Login Here...

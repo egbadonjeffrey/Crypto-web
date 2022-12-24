@@ -33,12 +33,12 @@ const Regulation = () => {
   return (
     <Layout>
       <main className="flex flex-col gap-[3rem] h-auto z-10 mt-[10%]">
-        <div className="w-[70%] mx-auto ">
-          <h2 className="text-center text-[1.75rem] font-bold mb-[5rem] ">
+        <div className="w-[70%] mx-auto mt-[5rem] ">
+          <h2 className="text-center text-[1.75rem] font-bold mb-[4rem] text-[#d1d1d1]  ">
             Regulation
           </h2>
           <div className="font-quicksand">
-            <h3 className="flex flex-col text-left text-[15px] w-[50%] ">
+            <h3 className="flex flex-col text-left text-[15px]  w-full tablet:w-[90%] ">
               <span className="text-[#bed1d9] font-bold text-center mb-[2rem] ">
                 {day + " " + date + " " + currentTime}
               </span>
@@ -46,7 +46,7 @@ const Regulation = () => {
                 <Link href="/" className="text-[blue] hover:text-[#007bff]  ">
                   Homepage
                 </Link>
-                {" - Guide"}
+                {" - Regulation"}
               </span>
             </h3>
 

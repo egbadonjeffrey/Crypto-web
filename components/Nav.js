@@ -150,6 +150,7 @@ const Nav = () => {
               </Link>
             </div>
 
+            {/* Mobile Menu Starts */}
             <div
               className={`
               bg-[#151621] px-[1rem] py-[2rem] ${
@@ -159,41 +160,42 @@ const Nav = () => {
               <ul className="flex flex-col h-[50%] gap-[.5rem] pt-7">
                 <Link
                   href="/"
-                  className=" text-[#edf1f3] font-bold font-poppins font-[700] py-[0.9rem] px-[0.7rem] pl-[2rem]  border-b-[.1px] tablet:border-b-[.5px]  "
+                  className=" text-[#edf1f3] font-bold font-poppins font-[700] py-[0.9rem] px-[0.7rem] pl-[2rem]  border-b-[.1px] tablet:border-b-[.5px] border-[#b0b0b050]  "
+                  onClick={() => setMenu(false)}
                 >
                   Home
                 </Link>
                 <Link
                   href="/guide"
-                  className=" text-[#edf1f3] font-bold font-poppins font-[700] py-[0.9rem] px-[0.7rem] pl-[2rem]  border-b-[.5px]  "
+                  className=" text-[#edf1f3] font-bold font-poppins font-[700] py-[0.9rem] px-[0.7rem] pl-[2rem]  border-b-[.1px] tablet:border-b-[.5px] border-[#b0b0b050]    "
                   onClick={() => setMenu(false)}
                 >
                   Guide
                 </Link>
                 <Link
                   href="/regulation"
-                  className=" text-[#edf1f3] font-bold font-poppins font-[700] py-[0.9rem] px-[0.7rem] pl-[2rem] border-b-[.3px]  "
+                  className=" text-[#edf1f3] font-bold font-poppins font-[700] py-[0.9rem] px-[0.7rem] pl-[2rem] border-b-[.1px] tablet:border-b-[.5px] border-[#b0b0b050]    "
                   onClick={() => setMenu(false)}
                 >
                   Regulation
                 </Link>
                 <Link
                   href="#"
-                  className=" text-[#edf1f3] font-bold font-poppins font-[700] py-[0.9rem] px-[0.7rem] pl-[2rem] border-b-[.3px]  "
+                  className=" text-[#edf1f3] font-bold font-poppins font-[700] py-[0.9rem] px-[0.7rem] pl-[2rem] border-b-[.1px] tablet:border-b-[.5px] border-[#b0b0b050]    "
                   onClick={() => setMenu(false)}
                 >
                   Open Trade
                 </Link>
                 <Link
                   href="#"
-                  className=" text-[#edf1f3] font-bold font-poppins font-[700] py-[0.9rem] px-[0.7rem] pl-[2rem] border-b-[.3px]  "
+                  className=" text-[#edf1f3] font-bold font-poppins font-[700] py-[0.9rem] px-[0.7rem] pl-[2rem] border-b-[.1px] tablet:border-b-[.5px] border-[#b0b0b050]    "
                   onClick={() => setMenu(false)}
                 >
                   Try demo
                 </Link>
                 <Menu
                   as="div"
-                  className="relative inline-block border-b-[.3px] "
+                  className="relative inline-block border-b-[.1px] tablet:border-b-[.5px] border-[#b0b0b050] "
                 >
                   <Menu.Button className="text-[#edf1f3] font-bold font-poppins font-[700] py-[0.9rem] px-[0.7rem] pl-[2rem] ">
                     Account
@@ -222,7 +224,7 @@ const Nav = () => {
                 </Menu>
                 <Link
                   href="/contactus"
-                  className=" text-[#edf1f3] font-bold font-poppins font-[700] py-[0.9rem] px-[0.7rem] pl-[2rem] border-b-[.3px]  "
+                  className=" text-[#edf1f3] font-bold font-poppins font-[700] py-[0.9rem] px-[0.7rem] pl-[2rem] border-b-[.1px] tablet:border-b-[.5px] border-[#b0b0b050]    "
                   onClick={() => setMenu(false)}
                 >
                   Contact us

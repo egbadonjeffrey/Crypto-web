@@ -77,7 +77,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-[1rem] justify-between w-[40%] my-[1rem]">
+        <div className="flex flex-col gap-[1rem] mx-auto tablet:mx-0   tablet:justify-between w-[50%] my-[1rem]">
           <Image src={Logo} alt="Logo" width={100} height={100} />
           <div className="flex flex-row gap-[.5rem]">
             <Image

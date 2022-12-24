@@ -29,8 +29,8 @@ const Support = () => {
       <div className="absolute top-0 bottom-0 left-0 right-0 w-full max-h-[200px]">
         <Image src={supportBg} className="w-full h-[50%]" alt="support bg" />
       </div>
-      <div className="container flex tablet:flex-row gap-[2rem]  w-[70%]  phone:w-full mx-auto">
-        <div className="flex-1 min-w-[50%] tablet-[100%] px-[15px]">
+      <div className="container flex tablet:flex-row gap-[2rem] w-full  tablet:w-[70%]  phone:w-full mx-auto">
+        <div className="flex-1  px-[10%]">
           <h2 className="text-[27px] text-[#2e2f38] mb-[20px] font-bold">
             We are with you ,<br /> every step of the way
           </h2>

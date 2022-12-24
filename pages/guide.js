@@ -33,16 +33,16 @@ const GuidePage = () => {
   return (
     <Layout title="Guide">
       <main className="flex flex-col gap-[3rem] h-auto z-10 mt-[10%]">
-        <div className="w-[70%] mx-auto ">
-          <h2 className="text-center text-[1.75rem] font-bold mb-[5rem] ">
+        <div className="w-[70%] mx-auto mt-[5rem] ">
+          <h2 className="text-center text-[1.75rem] font-bold mb-[4rem] text-[#d1d1d1] ">
             Guide To Trade
           </h2>
           <div className="font-quicksand">
-            <h3 className="flex flex-col text-left text-[15px] w-[50%] ">
+            <h3 className="flex flex-col text-left text-[15px] w-full tablet:w-[70%] ">
               <span className="text-[#bed1d9] font-bold text-center mb-[2rem] ">
                 {day + " " + date + " " + currentTime}
               </span>
-              <span className="font-[700] ">
+              <span className="font-[700] text-white ">
                 <Link href="/" className="text-[blue] hover:text-[#007bff]  ">
                   Homepage
                 </Link>
@@ -161,8 +161,8 @@ const GuidePage = () => {
 
           <div className="mb-[10rem] "></div>
 
-          <div className="absolute bottom-0 mt-[150vp] p-4 w-[70%] mx-auto border-4 border-solid  ">
-            <h1 className="text-[1.5rem] font-bold">Acoount Manager</h1>
+          <div className="absolute left-0 right-0 bottom-0 mt-[150vp] p-4 w-full tablet:w-[70%] mx-auto border-4 border-solid  ">
+            <h1 className="text-[1.5rem] font-bold">Acount Manager</h1>
             <p>To verify your account manager please write us at</p>
 
             <p className="font-bold">

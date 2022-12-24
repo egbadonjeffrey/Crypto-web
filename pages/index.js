@@ -14,7 +14,7 @@ import styles from "../styles/Home.module.css";
 export default function Home() {
   return (
     <Layout title="Home Page">
-      <div className="flex flex-col gap-[3rem] min-h-full z-10 mt-[30%] tablet:mt-[10%]">
+      <div className="flex flex-col gap-[3rem] min-h-full z-10 mt-[30%] tablet:mt-[15%]">
         <Video />
         <Process />
         <Plans />

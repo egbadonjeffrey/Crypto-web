@@ -29,18 +29,19 @@ const Login = () => {
   return (
     <Layout title="Login page">
       <div className="flex flex-col gap-[2rem] h-auto mt-[20%] tablet:mt-[10%] ">
-        <div className="w-[70%] mx-auto ">
+        <div className="w-[90%] tablet:w-[70%] mx-auto ">
           <h5 className="flex flex-col gap-[2rem] justify-between ">
             <span className="text-[#bed1d9] font-bold text-center mb-[2rem] ">
               <p className="text-center mt-[3rem] ">
                 {day + " " + date + " " + time}
               </p>
             </span>
+
             <span className="text-left text-white font-bold ">Login</span>
           </h5>
         </div>
 
-        <div className=" w-[70%] mx-auto my-[2rem] py-[2rem] px-[2rem] -mt-[5%] ">
+        <div className=" w-[90%] tablet:w-[70%] mx-auto my-[2rem] py-[2rem] px-[1rem] tablet:px-[2rem] -mt-[5%] ">
           <Form />
         </div>
       </div>
@@ -52,7 +53,7 @@ export default Login;
 
 const Form = () => {
   return (
-    <div className="py-10 px-7 w-[55%] h-auto  ">
+    <div className="py-10 px-2 tablet:px-7 w-full h-auto  ">
       <h2 className=" font-bold text-white text-[30px] ">
         Fill in your correct details
       </h2>
@@ -87,9 +88,11 @@ const Form = () => {
           </label>
         </div>
 
-        <button className="w-full h-[40px] font-medium uppercase font-poppins bg-[#04a9f5] hover:bg-[#199cd9] text-white mt-[1rem] rounded-lg tracking-wider ">
-          Login
-        </button>
+        <div className="w-full text-center">
+          <button className="w-full laptop:w-[50%] h-[40px]   font-medium uppercase font-poppins bg-[#04a9f5b0] hover:bg-[#04a9f5] text-white mt-[1rem] rounded-lg tracking-wider ">
+            Login
+          </button>
+        </div>
       </form>
       <div className="flex flex-row justify-between w-full mt-[2rem] px-[1rem] ">
         <Link href="/signup" className="text-[#04a9f5] hover:underline ">
