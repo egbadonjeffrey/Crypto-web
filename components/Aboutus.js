@@ -4,7 +4,7 @@ import * as Data from "../utils/data";
 import CountUp from "react-countup";
 import ScrollTrigger from "react-scroll-trigger";
 import { useState } from "react";
-// import { AdvancedChart } from "react-tradingview-embed";
+import { AdvancedChart } from "react-tradingview-embed";
 
 const Aboutus = () => {
   const { Legend } = Data.Data;
@@ -13,10 +13,10 @@ const Aboutus = () => {
 
   return (
     <div className={`${style.aboutus} relative  `}>
-      <div className="w-[70%] mx-auto py-[50px]">
+      <div className="w-[90%] mx-auto py-[50px]">
         <div className="flex flex-col tablet:flex-row gap-[2rem] justify-center items-center ">
-          <div className="chart flex-1 hidden tablet:block">
-            {/* <AdvancedChart /> */}
+          <div className="chart flex-1 hidden laptop:block">
+            <AdvancedChart />
           </div>
           <div className="about_text tablet:flex-1 text-white ">
             <div className=" flex flex-col text-center tablet:text-right gap-[1rem] w-full ">
@@ -35,9 +35,9 @@ const Aboutus = () => {
                 invest is 100% insured
               </p>
             </div>
-            <div className="legend_count flex tablet:flex-row gap-[2rem] flex-col items-center tablet:text-right w-[60%] tablet:w-full mx-auto ">
+            <div className="legend_count flex tablet:flex-row gap-[2rem] flex-col  tablet:text-right w-[60%] tablet:w-full mx-auto ">
               {Legend.map((legend, index) => (
-                <div key={index} className="flex-1 w-full tablet:w-[33.33%] ">
+                <div key={index} className="flex-1 w-full tablet:w-full ">
                   <div className="flex justify-center tablet:justify-end items-center gap-[.5rem]">
                     <span className="text-[36px] text-[#ffeb3b] font-bold">
                       <ScrollTrigger

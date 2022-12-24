@@ -9,7 +9,7 @@ const Process = () => {
   const process = [
     {
       image: (
-        <FaCreditCard className="w-[30%] tablet:w-[10%] h-[30%] tablet:h-[10%] text-[#83ecff] mb-[10px] " />
+        <FaCreditCard className="w-[20%] h-[30%] tablet:w-[10%]  tablet:h-[10%] laptop:w-[20%] laptop:h-[20%]  text-[#83ecff] mb-[10px] " />
       ),
       title: "Deposit",
       description:
@@ -17,7 +17,7 @@ const Process = () => {
     },
     {
       image: (
-        <FaChartLine className="w-[30%] tablet:w-[10%] h-[30%] tablet:h-[10%] text-[#ff87a3] mb-[10px] " />
+        <FaChartLine className="w-[20%] tablet:w-[10%] h-[30%] tablet:h-[10%]  laptop:w-[20%] laptop:h-[20%]  text-[#ff87a3] mb-[10px] " />
       ),
       title: "Trade",
       description:
@@ -25,7 +25,7 @@ const Process = () => {
     },
     {
       image: (
-        <FaWallet className="w-[30%] tablet:w-[10%] h-[30%] tablet:h-[10%] text-[#8BC34A] mb-[10px] " />
+        <FaWallet className="w-[20%] tablet:w-[10%] h-[30%] tablet:h-[10%]  laptop:w-[20%] laptop:h-[20%] text-[#8BC34A] mb-[10px] " />
       ),
       title: "Withdraw",
       description:
@@ -44,10 +44,13 @@ const Process = () => {
             index < 1 ? "h-auto" : "h-[14rem]"
           } rounded-lg  border-solid border-2 border-#eaeef1] `}
         >
-          {data.image}
-          <h2 className="text-[17px] font-bold mb-[0.5rem] font-poppins ">
-            {data.title}
-          </h2>
+          <div className=" flex flex-col text-center w-full justify-center items-center tablet:items-start">
+            {data.image}{" "}
+            <h2 className="text-[17px] font-bold mb-[0.5rem] font-poppins ">
+              {data.title}
+            </h2>
+          </div>
+
           <p className="font-quicksand "> {data.description} </p>
         </div>
       ))}

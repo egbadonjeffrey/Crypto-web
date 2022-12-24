@@ -7,7 +7,7 @@ const Video = () => {
       <h1 className="text-center uppercase text-white text-3xl bold ">
         Secured and fast trading...
       </h1>
-      <video width="600" height="320" controls>
+      <video width="600" height="200" controls>
         <source src="https://erovelyntrades.com/img/vid.mp4" type="video/mp4" />
       </video>
     </div>

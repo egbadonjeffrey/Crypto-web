@@ -51,7 +51,7 @@ const Support = () => {
         <div className="flex-1 hidden laptop:block max-w-[41.667%]  ">
           <div className={`${style.hover_box_container} relative`}>
             <a
-              href="#"
+              href="#tab1"
               className={`${style.display_onhover_box_item} ${
                 tab ? style.active : style.itsnot
               } `}
@@ -70,7 +70,7 @@ const Support = () => {
               <Image src={qualityBadge} className="w-[35px]" alt="tab1" />
             </a>
             <a
-              href="#"
+              href="#tab2"
               className={`${style.display_onhover_box_item}  ${
                 tab2 ? style.active : style.itsnot
               } `}
@@ -88,7 +88,7 @@ const Support = () => {
               <Image src={responsive} className="w-[35px]" alt="tab1" />
             </a>
             <a
-              href="#"
+              href="#tab3"
               className={`${style.display_onhover_box_item}  ${
                 tab3 ? style.active : style.itsnot
               } `}
@@ -106,7 +106,7 @@ const Support = () => {
               <Image src={direct} className="w-[35px]" alt="tab1" />
             </a>
             <a
-              href="#"
+              href="#tab4"
               className={`${style.display_onhover_box_item}  ${
                 tab4 ? style.active : style.itsnot
               } `}
@@ -124,7 +124,7 @@ const Support = () => {
               <Image src={support} className="w-[35px]" alt="tab1" />
             </a>
             <a
-              href="#"
+              href="#tab5"
               className={`${style.display_onhover_box_item}  ${
                 tab5 ? style.active : style.itsnot
               } `}
@@ -142,7 +142,7 @@ const Support = () => {
               <Image src={secured} className="w-[35px]" alt="tab1" />
             </a>
             <a
-              href="#"
+              href="#tab6"
               className={`${style.display_onhover_box_item}  ${
                 tab6 ? style.active : style.itsnot
               } `}
@@ -160,7 +160,7 @@ const Support = () => {
               <Image src={educative} className="w-[35px]" alt="tab1" />
             </a>
             <a
-              href="#"
+              href="#tab7"
               className={`${style.display_onhover_box_item}  ${
                 tab7 ? style.active : style.itsnot
               } `}
@@ -178,7 +178,7 @@ const Support = () => {
               <Image src={community} className="w-[35px]" alt="tab1" />
             </a>
             <a
-              href="#"
+              href="#tab8"
               className={`${style.display_onhover_box_item}  ${
                 tab8 ? style.active : style.itsnot
               } `}
