@@ -9,7 +9,7 @@ const Process = () => {
   const process = [
     {
       image: (
-        <FaCreditCard className="w-[30%] h-[30%] text-[#83ecff] mb-[10px] " />
+        <FaCreditCard className="w-[30%] tablet:w-[10%] h-[30%] tablet:h-[10%] text-[#83ecff] mb-[10px] " />
       ),
       title: "Deposit",
       description:
@@ -17,14 +17,16 @@ const Process = () => {
     },
     {
       image: (
-        <FaChartLine className="w-[30%] h-[30%] text-[#ff87a3] mb-[10px] " />
+        <FaChartLine className="w-[30%] tablet:w-[10%] h-[30%] tablet:h-[10%] text-[#ff87a3] mb-[10px] " />
       ),
       title: "Trade",
       description:
         "Trade on several assets upto 200 stocks and also crypto trading.",
     },
     {
-      image: <FaWallet className="w-[30%] h-[30%] text-[#8BC34A] mb-[10px] " />,
+      image: (
+        <FaWallet className="w-[30%] tablet:w-[10%] h-[30%] tablet:h-[10%] text-[#8BC34A] mb-[10px] " />
+      ),
       title: "Withdraw",
       description:
         "Get instant withdraw of profits processed to your accounts within 2 business days.",
@@ -32,7 +34,9 @@ const Process = () => {
   ];
 
   return (
-    <div className={`flex gap-5 -mt-[1rem] w-[70%] mx-auto`}>
+    <div
+      className={`flex flex-col laptop:flex-row gap-5  -mt-[1rem] w-[70%] mx-auto`}
+    >
       {process.map((data, index) => (
         <div
           key={index}

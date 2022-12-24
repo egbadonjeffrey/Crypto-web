@@ -3,7 +3,7 @@
     flex: 33.33%;
     display: flex;
     gap: 1.5rem;
-    max-width: 33.33%;
+    min-width: 33.33%;
     padding: 30px 30px;
     overflow: hidden;
     border-radius: 5px;
@@ -40,12 +40,18 @@
     flex: 33.33%;
     display: flex;
     gap: 1.5rem;
-    max-width: 33.33%;
+    min-width: 33.33%;
     padding: 30px 30px;
     overflow: hidden;
     border-radius: 5px;
     z-index: 1;
     box-shadow: 0 10px 100px 0 rgba(77, 77, 119, 0.16);
+}
+
+@media screen and  (width: 768px) {
+    .plan_last {
+        min-width: 40%;
+    }
 }
 .plan_last::after {
     content: '';

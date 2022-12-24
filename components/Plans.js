@@ -22,7 +22,7 @@ const Plans = () => {
       </h1>
 
       <div className="flex flex-col justify-between">
-        <div className="selection-tab flex flex-row  bg-[#f3f2f8] p-[.3rem] w-[30%] mx-auto my-[4rem] text-[#b4c3ca] ">
+        <div className="selection-tab flex flex-row  bg-[#f3f2f8] p-[.3rem] w-[60%] tablet:w-[30%] mx-auto my-[4rem] text-[#b4c3ca] ">
           {["forex", "crypto"].map((data, index) => (
             <div
               key={index}
@@ -36,7 +36,9 @@ const Plans = () => {
           ))}
         </div>
 
-        <div className={`plans flex gap-[1rem] justify-between`}>
+        <div
+          className={`plans flex flex-col laptop:flex-row gap-[1rem] justify-around`}
+        >
           {Plans.filter((plans) => isPackage(plans)).map((data, index) => (
             <div
               key={index}
