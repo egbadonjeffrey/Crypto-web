@@ -11,6 +11,10 @@ const Layout = ({ title, children }) => {
         <title> {title ? title + " - Alphfxtrading" : "Alphafxtrading"} </title>
         <meta name="description" content="Crypto Investment Website" />
         <link rel="icon" href="/favicon.ico" />
+        <script
+          src="//code.tidio.co/iydw0bnkbu3vmr8n30vkhmuejbhscnp6.js"
+          async
+        ></script>
       </Head>
 
       <div className="flex flex-col justify-between  z-50 relative ">

@@ -15,10 +15,10 @@ const Footer = () => {
       <div
         className={`${style.footer_inner} flex flex-col justify-between gap-[1rem] w-[70%] mx-auto  text-[#969cc1] `}
       >
-        <div className="flex flex-col tablet:flex-row gap-[1rem] justify-between  ">
+        <div className="flex flex-col tablet:flex-row gap-[2rem] justify-between  ">
           <div className="flex flex-col flex-[0.6] ">
             <h1 className="text-[24px] text-white pb-[20px] ">Quick Links</h1>
-            <div className="flex tablet:flex-col  justify-between text-[#969cc1] text-[14px] ">
+            <div className="flex flex-col tablet:flex-row  justify-between text-[#969cc1] text-[14px] ">
               <ul>
                 <li className={`${style.item}`}>
                   <Link href="/guide">Guide</Link>
@@ -122,7 +122,7 @@ const Footer = () => {
               <span>English</span>
             </div>
 
-            <div className="flex flex-row gap-[.5rem]  justify-between items-center">
+            <div className="flex flex-row gap-[.5rem] justify-between items-center">
               <Image
                 src={Flag}
                 alt="usa flag"
