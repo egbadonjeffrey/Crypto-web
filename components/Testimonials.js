@@ -19,10 +19,13 @@ const Testimonials = () => {
       </h1>
       <Swiper
         spaceBetween={10}
-        slidesPerView={2}
+        slidesPerView={3}
         breakpoints={{
-          320: {
+          425: {
             slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
           },
         }}
         pagination={{
@@ -32,7 +35,7 @@ const Testimonials = () => {
       >
         {Testimonials.map((testimonial, index) => (
           <SwiperSlide key={index}>
-            <div className="slide flex flex-col tablet:flex-row items-center  h-auto gap-[1.5rem] justify-around  my-[4rem]  py-[2rem] px-[1rem] s rounded-lg">
+            <div className="slide flex flex-col items-center  h-auto gap-[1.5rem] justify-around  my-[2rem]  py-[2rem] px-[1rem]  rounded-lg">
               <div
                 className={`${style.image} w-[100px] h-[100px] relative  rounded-full`}
               >

@@ -22,11 +22,11 @@ const Plans = () => {
       </h1>
 
       <div className="flex flex-col justify-between">
-        <div className="selection-tab flex flex-row  bg-[#f3f2f8] p-[.3rem] w-[60%] tablet:w-[30%] mx-auto my-[4rem] text-[#b4c3ca] ">
+        <div className="selection-tab flex flex-row  bg-[#f3f2f8] p-[.4rem] w-[80%] tablet:w-[50%] mx-auto my-[4rem] text-[#b4c3ca] ">
           {["forex", "crypto"].map((data, index) => (
             <div
               key={index}
-              className={`text-center p-4 w-[50%] font-bold capitalize cursor-pointer ${
+              className={`text-center p-4 w-[65%] font-bold capitalize cursor-pointer ${
                 plan === data && style.active
               }`}
               onClick={() => setPlan(data)}

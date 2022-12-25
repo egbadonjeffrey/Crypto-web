@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="flex flex-col tablet:flex-row gap-[1rem] justify-between  ">
           <div className="flex flex-col flex-[0.6] ">
             <h1 className="text-[24px] text-white pb-[20px] ">Quick Links</h1>
-            <div className="flex  justify-between text-[#969cc1] text-[14px] ">
+            <div className="flex tablet:flex-col  justify-between text-[#969cc1] text-[14px] ">
               <ul>
                 <li className={`${style.item}`}>
                   <Link href="/guide">Guide</Link>

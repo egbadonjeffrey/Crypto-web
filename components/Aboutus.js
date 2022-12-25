@@ -1,10 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "../styles/aboutus.module.css";
 import * as Data from "../utils/data";
 import CountUp from "react-countup";
 import ScrollTrigger from "react-scroll-trigger";
-import { useState } from "react";
-import { AdvancedChart } from "react-tradingview-embed";
 
 const Aboutus = () => {
   const { Legend } = Data.Data;
@@ -16,7 +14,7 @@ const Aboutus = () => {
       <div className="w-[90%] mx-auto py-[50px]">
         <div className="flex flex-col tablet:flex-row gap-[2rem] justify-center items-center ">
           <div className="chart flex-1 hidden laptop:block">
-            <AdvancedChart />
+            <div></div>
           </div>
           <div className="about_text tablet:flex-1 text-white ">
             <div className=" flex flex-col text-center tablet:text-right gap-[1rem] w-full ">
